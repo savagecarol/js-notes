@@ -1,9 +1,6 @@
 // for printing cards
-console.log("DSFdsffd");
 let answer = new Array([","]);
-answer = localStorage.getItem("1");
-if(answer!==null) answer.split(",");
-
+answer = localStorage.getItem("1").split(",");
 let n = answer.length;
 console.log(n);
 for(var i = 1 ; i < n ; i++)
@@ -21,11 +18,9 @@ for(var i = 1 ; i < n ; i++)
 
 // for text field
 
-const form  = document.getElementById('one');
+let form  = document.getElementById('one');
 let text = document.getElementById('data');
-form.addEventListener('click', (event) => {
-
-    event.preventDefault();
+form.addEventListener('click', () => {
     answer.push(text.value);
     localStorage.setItem("1" , answer);
     location.reload();
