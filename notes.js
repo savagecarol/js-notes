@@ -1,31 +1,36 @@
 // for printing cards
-if(localStorage.getItem("1") !== null)
-    answer = Array.from(localStorage.getItem("1").split(","));
-else
-    answer = new Array([","]);
-console.log(answer);
- 
+function dell(key)
+{
+    console.log("DSF");
+    // localStorage.removeItem(key);
+    // location.reload();
+}
 
-    let n = answer.length;
-    console.log(n);
-    for(var i = 2 ; i < n ; i++)
-    {
+for (i=0; i<localStorage.length; i++)  
+{  
+    let key = localStorage.key(i); 
+    let value = localStorage.getItem(key);
     let p = document.getElementById("abcd");
-    p.innerHTML+= `<div class = "card" >
+            p.innerHTML+= `
+                        <div class = "card" >           
                         <div class = "container">
-                        <h3> <b>  Note  ${i-1} </b> </h3>
+                        <img src ="https://www.pinclipart.com/picdir/middle/35-356107_close-button-icon-png-clipart.png" class = "img" onclick = "dell(${key})" >
+                        <h5> <b>  ${key} </b> </h5>
                             <h6>
-                                ${answer[i]} 
+                                ${value} 
                             </h6>
                         </div>
                     </div> `;
-    } 
-
+ }
+ 
 // for text field
 let form  = document.getElementById('one');
 let text = document.getElementById('data');
+let head = document.getElementById('head');
 form.addEventListener('click', () => {
-    answer.push(text.value);
-    localStorage.setItem("1" , answer);
+    localStorage.setItem(head.value , text.value);
     location.reload();
 });
+
+
+
