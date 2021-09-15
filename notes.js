@@ -4,7 +4,8 @@ if(localStorage.getItem("1") !== null)
 else
     answer = new Array([","]);
 console.log(answer);
-    
+ 
+
     let n = answer.length;
     console.log(n);
     for(var i = 2 ; i < n ; i++)
