@@ -17,10 +17,13 @@ for(var i = 1 ; i < n ; i++)
 } 
 
 // for text field
-const form  = document.getElementById('form');
-form.addEventListener('submit', (event) => {
+
+const form  = document.getElementById('one');
+let text = document.getElementById('data');
+form.addEventListener('click', (event) => {
+
     event.preventDefault();
-    answer.push(form.elements['data'].value);
+    answer.push(text.value);
     localStorage.setItem("1" , answer);
     location.reload();
 });
