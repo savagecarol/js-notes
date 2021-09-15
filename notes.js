@@ -1,10 +1,8 @@
 // for printing cards
+console.log("DSFdsffd");
 let answer = new Array([","]);
 if(answer != null)  answer = localStorage.getItem("1").split(",");
-
-
 let n = answer.length;
-
 console.log(n);
 for(var i = 1 ; i < n ; i++)
 {
