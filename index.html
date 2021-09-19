@@ -2,6 +2,35 @@
 <html lang="en">
 <head>
 
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyDhiFqTYtU31TGJk4xjgYqYf1QOgVSCXQA",
+          authDomain: "savagecarol-notes.firebaseapp.com",
+          projectId: "savagecarol-notes",
+          storageBucket: "savagecarol-notes.appspot.com",
+          messagingSenderId: "353283522354",
+          appId: "1:353283522354:web:a59c85686fdfbcc17b212b",
+          measurementId: "G-139RG6ZWSV"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+
+
+
+
+
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
